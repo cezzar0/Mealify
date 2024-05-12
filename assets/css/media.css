@@ -1,0 +1,233 @@
+/* Resposive Container */
+
+/* // XX-Large devices (larger desktops, more than 1400px) */
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* // X-Small devices Padding */
+@media screen and (max-width: 576px) {
+  .container {
+    padding-inline: 15px;
+  }
+}
+
+/* Media for Navbar */
+@media screen and (max-width: 1200px) {
+  nav .container .menu-icon {
+    display: block;
+  }
+
+  nav .container ul {
+    transform: translateX(100%);
+    position: absolute;
+    background-color: #fff;
+    flex-direction: column;
+    width: 350px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding-inline: 10px;
+    gap: 0;
+  }
+
+  nav .container ul li {
+    padding-block: 20px;
+  }
+
+  nav .container .nav-links .close-icon {
+    display: block;
+    text-align: right;
+  }
+
+  nav .container .mode {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+
+/* Media for Header Section */
+@media screen and (min-width: 1200px) {
+  header {
+    min-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .container {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  header .container > * {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  header .container .header-content {
+    margin-top: 30px;
+  }
+
+  .btn-main {
+    --background-color: var(--color-primary);
+    --border-radius: 100vh;
+    --padding: 0.625rem 1.5625rem;
+    --font-size: 15px;
+    --hover-bg-color: hsl(
+      var(--primary-hue),
+      var(--primary-saturation),
+      calc(var(--primary-lightness) + 10%)
+    );
+    --hover-color: var(--color-light);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header .container .header-content .btns {
+    flex-direction: column;
+  }
+}
+
+/* Media for Cefs Section */
+@media screen and (max-width: 992px) {
+  .chefs .container .chefs-cards .card {
+    width: calc(calc(100% - var(--gap)) / 2);
+  }
+}
+@media screen and (max-width: 768px) {
+  .chefs .container .chefs-cards .card {
+    width: 100%;
+  }
+}
+
+/* Media for Gallery Section */
+
+@media screen and (max-width: 1400px) {
+  .gallery .container .gallery-photos {
+    height: 1000px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .gallery .container .gallery-photos {
+    height: 845px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .gallery .container .gallery-photos {
+    height: 1405px;
+  }
+
+  .gallery .container .gallery-photos picture {
+    width: calc(calc(100% - var(--gap)) / 2);
+  }
+
+  .gallery .container .gallery-photos .pizza {
+    order: 1;
+  }
+  .gallery .container .gallery-photos .fried {
+    order: 6;
+  }
+  .gallery .container .gallery-photos .omelette {
+    order: 4;
+  }
+  .gallery .container .gallery-photos .kofta {
+    order: 7;
+  }
+  .gallery .container .gallery-photos .burger {
+    order: 2;
+  }
+  .gallery .container .gallery-photos .pizza-slices {
+    order: 3;
+  }
+  .gallery .container .gallery-photos .steak {
+    order: 5;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery .container .gallery-photos {
+    height: auto;
+  }
+
+  .gallery .container .gallery-photos picture {
+    width: 100%;
+  }
+}
+
+/* Media for Contact Section */
+
+@media screen and (max-width: 992px) {
+  .contact .container form .input-group input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact .container .details > div {
+    width: 100%;
+  }
+}
+
+/* Media for Footer  */
+
+@media screen and (max-width: 1200px) {
+  footer .container :is(.about, .contact-details) {
+    width: calc(calc(100% - var(--gap) * 2) / 2);
+    order: 1;
+  }
+
+  footer .container :is(.subscription) {
+    width: 100%;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer .container :is(.about, .contact-details, .subscription) {
+    width: 100%;
+    order: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  footer .container .subscription .subscription-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
